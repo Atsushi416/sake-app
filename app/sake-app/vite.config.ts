@@ -6,7 +6,11 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 9000,
-    host: '0.0.0.0' // hostから接続するため「0.0.0.0」でlisten
+    host: '0.0.0.0', // hostから接続するため「0.0.0.0」でlisten,
+    cors: {
+      origin: false,
+      allowedHeaders: '*'
+    }
   }
 })
 
