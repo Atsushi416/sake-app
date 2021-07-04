@@ -1,8 +1,10 @@
 <template>
 <div>
+  <header class="header">
     <h1>Sake App</h1>
     <p>さけのわAPIを使用したアプリ</p>
     <p>さけのわデータ（<a href="https://sakenowa.com">https://sakenowa.com</a>）を利用しています</p>
+  </header>
     <ul>
       <li v-for="item in res">
         {{ item.id + ':' + item.name }}
@@ -43,5 +45,10 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
+$white_murky: #fafafa;
+
+.header {
+  background-color: $white_murky;
+}
 </style>
